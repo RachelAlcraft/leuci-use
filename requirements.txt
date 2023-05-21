@@ -1,0 +1,8 @@
+biopython
+numpy
+scipy
+matplotlib
+plotly
+leuci-xyz
+leuci-pol
+leuci-map
