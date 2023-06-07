@@ -6,3 +6,6 @@ plotly
 leuci-xyz
 leuci-pol
 leuci-map
+leuci-geo
+gemmi
+pandas

@@ -12,14 +12,14 @@ And produces and html file with an inmage of the density using plotly
 
 """
 #### USER INPUTS ###
-pdb_code = "6eex"
-central_atom = "A:707@C.A"
-linear_atom = "A:707@CA.A"
-planar_atom = "A:707@O.A"
+pdb_code = "7uly"
+central_atom = "A:3@CE1.A"
+linear_atom = "A:3@CZ.A"
+planar_atom = "A:3@CE2.A"
 interpolation = "bspline"
-width = 8 #Angstrom
-samples = 100
-depth_samples = 25
+width = 9 #Angstrom
+samples = 50
+depth_samples = 10
 file_output2d = "slice-2d.html"
 file_output3d = "slice-3d.html"
 #### ----------- ###
@@ -55,5 +55,5 @@ mplot.make_plot_slices(log_level=1)
 filename = RESDIR + file_output3d
 mplot = mpl.MapPlotter(mf, filename,interpolation,samples,width,cc,ll,pp,(1,1))
 vals,coords = mf.get_slice(cc,ll,pp,width,samples,interpolation,deriv=0,depth_samples=depth_samples)
-mplot.make_plot_slice_3d("density",vals,coords,min_percent=0.9, max_percent=0.9,hue="GBR",centre=True,title="Leucippus Plot 3d")   
+mplot.make_plot_slice_3d("density",vals,coords,min_percent=0.9, max_percent=0.9,hue="GBR",centre=True,title="Leucippus Plot 3d")
 
